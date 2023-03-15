@@ -8,7 +8,7 @@ r = requests.get('https://www.boredapi.com/api/activity/')
 
 r_json = r.json()
 activity = r_json["activity"]
-header = "The activity for the day is: " + activity
+header = "The activity for " + str(strftime("%a, %d %b %Y", localtime())) + " is: " + activity
 
 new_line = header+"\n"
 
